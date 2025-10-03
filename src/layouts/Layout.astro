@@ -1,22 +1,33 @@
+---
+import Header from "../sections/Header.astro"
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="/src/styles/global.css" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Ricardo's Portfolio</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-white text-black dark:bg-indigo-800 dark:text-white">
+		<Header />
+		<main id="main-content" class="flex min-h-screen flex-col items-center justify-center max-w-5xl mx-auto p-4">
+			<slot />
+		</main>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+	:global(body) {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		height: 100vh;
+		margin-top: 60px; /* Altura del header */
 	}
 </style>
+
+

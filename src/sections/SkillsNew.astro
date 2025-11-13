@@ -1,0 +1,119 @@
+---
+import BentoCard from "../components/BentoCard.astro";
+
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: "⚛️",
+    skills: ["ReactJS", "Redux", "TanStack Query", "Single Spa", "WordPress"],
+    accent: "cyan",
+    level: "Avanzado"
+  },
+  {
+    title: "Backend",
+    icon: "⚙️",
+    skills: ["Laravel", "Node.js", "Python", "PHPUnit"],
+    accent: "red",
+    level: "Avanzado"
+  },
+  {
+    title: "Arquitectura",
+    icon: "🏗️",
+    skills: ["SOLID", "MVC", "Strategy", "Microservicios", "TDD"],
+    accent: "purple",
+    level: "Intermedio"
+  },
+  {
+    title: "DevOps & Tools",
+    icon: "🛠️",
+    skills: ["Git/GitHub", "Docker", "RabbitMQ", "Playwright", "AWS"],
+    accent: "green",
+    level: "Intermedio"
+  }
+];
+
+const achievements = [
+  { icon: "📉", value: "90%", label: "Reducción horas operativas" },
+  { icon: "🐛", value: "80%", label: "Menos fallos en producción" },
+  { icon: "📦", value: "70K+", label: "Despachos gestionados" },
+  { icon: "⚡", value: "Días → Min", label: "Tiempo de respuesta" }
+];
+---
+
+<section id="skills" class="py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        🚀 Habilidades & Logros
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 text-lg">
+        Tecnologías y resultados comprobados
+      </p>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      {skillCategories.map((category) => (
+        <BentoCard 
+          accent={category.accent}
+          class="hover:shadow-2xl text-center"
+        >
+          <div class="h-full flex flex-col">
+            <div class="items-center">
+                <div class="text-4xl mb-3">{category.icon}</div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{category.title}</h3>
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white mb-4 w-fit ">
+                {category.level}
+                </span>
+            </div>
+            <ul class="space-y-2 flex-1 ">
+              {category.skills.map((skill) => (
+                <li class="text-gray-700 dark:text-gray-300 text-sm flex items-center gap-2 ">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-500 dark:bg-purple-400"></span>
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </BentoCard>
+      ))}
+    </div>
+
+    <!-- Achievements Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {achievements.map((achievement) => (
+        <BentoCard 
+          accent="amber"
+          class="text-center"
+        >
+          <div class="text-4xl mb-2">{achievement.icon}</div>
+          <div class="text-3xl font-bold text-gray-900 dark:text-white mb-1">
+            {achievement.value}
+          </div>
+          <div class="text-xs text-gray-600 dark:text-gray-300">
+            {achievement.label}
+          </div>
+        </BentoCard>
+      ))}
+    </div>
+
+    <!-- Mentoría -->
+    <div class="mt-6">
+      <BentoCard 
+        accent="indigo"
+      >
+        <div class="flex items-start gap-4">
+          <div class="text-5xl">👨‍🏫</div>
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Mentoría Técnica</h3>
+            <p class="text-indigo-600 dark:text-indigo-400 font-semibold mb-2">Holdco Networks • Abril 2024 – Actualidad</p>
+            <p class="text-gray-700 dark:text-gray-300 text-sm">
+              Capacito y guío a nuevos desarrolladores durante su onboarding técnico. 
+              Fomento buenas prácticas en React, Laravel, arquitectura de microservicios y desarrollo escalable.
+            </p>
+          </div>
+        </div>
+      </BentoCard>
+    </div>
+  </div>
+</section>

@@ -1,46 +1,28 @@
-# Astro Starter Kit: Basics
+# 👨‍💻 Portfolio - Ricardo Catril
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Portafolio personal desarrollado con **Astro** y diseño **Bento Grid**. 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Muestra mi experiencia como FullStack Developer especializado en CRM, ERP y eCommerce.
 
-## 🚀 Project Structure
+### Experiencia
+- **Holdco Networks** (2024 - Actualidad) - Desarrollador FullStack
+- **Mundo Pacífico** (2022 - 2024) - Programador Junior
+- **Educación** - Ingeniería Civil en Informática, Universidad del Bío-Bío
 
-Inside of your Astro project, you'll see the following folders and files:
+### Habilidades
+Stack técnico organizado en categorías:
+- Frontend: ReactJS, Redux, TanStack Query, Single Spa
+- Backend: Laravel, Node.js, Python, PHPUnit
+- Arquitectura: SOLID, MVC, Strategy, Microservicios, TDD
+- DevOps: Git, Docker, RabbitMQ, Playwright, AWS
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Incluye métricas de impacto: 90% reducción de horas operativas, 80% menos fallos en producción, 70K+ despachos gestionados.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Proyectos
+Casos de éxito destacados con tecnologías utilizadas y el impacto generado en cada proyecto.
 
-## 🧞 Commands
+## 📫 Contacto
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Email**: catril.ricardo@gmail.com
+- **LinkedIn**: [ricardo-catril](http://www.linkedin.com/in/ricardo-catril)
+- **Ubicación**: Concepción, Chile

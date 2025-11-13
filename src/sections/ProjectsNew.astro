@@ -1,0 +1,113 @@
+---
+import BentoCard from "../components/BentoCard.astro";
+
+const featuredProjects = [
+  {
+    title: "Portal de Reclamos Subtel",
+    description: "Integración de servicios de Subtel para automatizar respuestas. Reducción de tiempos de días a minutos.",
+    tech: ["ReactJS", "Redux", "Laravel", "API Integration"],
+    icon: "🚀",
+    accent: "blue",
+    impact: "Tiempo reducido: Días → Minutos"
+  },
+  {
+    title: "Sistema CRM/ERP Holdco",
+    description: "Interfaces con ReactJS + Redux + TanStack Query + Single Spa. Arquitectura de microservicios escalable.",
+    tech: ["ReactJS", "Redux", "TanStack Query", "Single Spa"],
+    icon: "💼",
+    accent: "purple",
+    impact: "80% menos fallos con TDD"
+  },
+  {
+    title: "Traducción de Lengua de Señas",
+    description: "Aplicación de traducción de lengua de señas chilenas utilizando modelos de Machine Learning con YOLOv6.",
+    tech: ["YOLOv6", "Python", "Machine Learning", "Computer Vision"],
+    icon: "🤖",
+    accent: "teal",
+    impact: "Tesis de Grado • 2022"
+  },
+  {
+    title: "Automatización Logística",
+    description: "Sistema de gestión de despachos con ALASXPRESS y Blue Express para Mundo Pacífico.",
+    tech: ["Laravel", "React", "WordPress", "API Integration"],
+    icon: "📦",
+    accent: "green",
+    impact: "70K+ despachos gestionados"
+  }
+];
+---
+
+<section id="projects" class="py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        ⚡ Proyectos Destacados
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 text-lg">
+        Soluciones que generan impacto real
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {featuredProjects.map((project, index) => (
+        <BentoCard 
+          accent={project.accent}
+          class={index === 0 ? "lg:col-span-2 lg:row-span-1" : ""}
+        >
+          <div class="h-full flex flex-col">
+            <div class="text-5xl mb-4">{project.icon}</div>
+            
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              {project.title}
+            </h3>
+            
+            <p class="text-gray-700 dark:text-gray-300 mb-4 flex-1">
+              {project.description}
+            </p>
+
+            <div class="mb-4">
+              <div class="flex flex-wrap gap-2">
+                {project.tech.map((tech) => (
+                  <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-600">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-gray-300 dark:border-gray-600">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="text-green-600 dark:text-green-400">📊</span>
+                <span class="text-gray-700 dark:text-gray-300 font-semibold">{project.impact}</span>
+              </div>
+            </div>
+          </div>
+        </BentoCard>
+      ))}
+    </div>
+
+    <!-- CTA para más proyectos -->
+    <!-- <div class="mt-6">
+      <BentoCard 
+        accent="orange"
+        class="text-center cursor-pointer hover:scale-105 transition-transform"
+      >
+        <div class="py-4">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            ¿Quieres ver más?
+          </h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Contáctame para conocer más proyectos y casos de éxito
+          </p>
+          <a 
+            href="mailto:catril.ricardo@gmail.com"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold hover:shadow-lg transition-all"
+          >
+            Enviar mensaje
+            <span>→</span>
+          </a>
+        </div>
+      </BentoCard>
+    </div> -->
+  </div>
+</section>

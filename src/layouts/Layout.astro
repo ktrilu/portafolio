@@ -3,30 +3,27 @@ import Header from "../sections/Header.astro"
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es" class="scroll-smooth dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Portfolio de Ricardo Catril - FullStack Developer especializado en ReactJS, Redux y Laravel" />
 		<link href="/src/styles/global.css" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Ricardo's Portfolio</title>
+		<title>Ricardo Catril | FullStack Developer</title>
 	</head>
-	<body class="bg-white text-black dark:bg-indigo-800 dark:text-white">
+	<body class="relative">
 		<Header />
-		<main id="main-content" class="flex min-h-screen flex-col items-center justify-center max-w-5xl mx-auto p-4">
+		<main id="main-content" class="relative z-10">
 			<slot />
 		</main>
 	</body>
 </html>
 
 <style>
-	:global(html) {
-		scroll-behavior: smooth;
-	}
 	:global(body) {
-		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		height: 100vh;
-		margin-top: 60px; /* Altura del header */
+		font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		min-height: 100vh;
 	}
 </style>
 

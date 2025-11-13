@@ -1,0 +1,97 @@
+---
+import BentoCard from "../components/BentoCard.astro";
+
+const experiences = [
+  {
+    company: "Holdco Networks",
+    role: "Desarrollador FullStack",
+    period: "Abril 2024 – Actualidad",
+    location: "Remoto",
+    highlights: [
+      "Diseñé interfaces CRM/ERP con ReactJS + Redux + TanStack Query",
+      "Implementé TDD con PHPUnit y Playwright, reduciendo 80% los fallos",
+      "Integré servicios de Subtel, reduciendo tiempos de días a minutos",
+      "Optimicé rendimiento con memoización y renderizado condicional"
+    ],
+    accent: "purple"
+  },
+  {
+    company: "Mundo Pacífico",
+    role: "Programador Junior",
+    period: "Agosto 2022 – Abril 2024",
+    location: "Concepción, Chile",
+    highlights: [
+      "Integré soluciones de eCommerce y CRM usando Laravel y React",
+      "Gestioné 70.000+ despachos automatizados",
+      "Reduje 90% de horas operativas por ejecutivo"
+    ],
+    accent: "blue"
+  },
+];
+---
+
+<section id="experience" class="py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        💼 Experiencia Profesional
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 text-lg">
+        Mi trayectoria en desarrollo de software
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {experiences.map((exp) => (
+        <BentoCard 
+          accent={exp.accent}
+          class="hover:shadow-2xl"
+        >
+          <div class="space-y-4">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">{exp.company}</h3>
+              <p class="text-purple-600 dark:text-purple-400 font-semibold">{exp.role}</p>
+              <div class="flex flex-wrap gap-2 mt-2 text-sm text-gray-600 dark:text-gray-400">
+                <span class="flex items-center gap-1">
+                  📅 {exp.period}
+                </span>
+                <span>•</span>
+                <span class="flex items-center gap-1">
+                  📍 {exp.location}
+                </span>
+              </div>
+            </div>
+
+            <ul class="space-y-2">
+              {exp.highlights.map((highlight) => (
+                <li class="flex items-start gap-2 text-gray-700 dark:text-gray-300 text-sm">
+                  <span class="text-green-600 dark:text-green-400 mt-1">✓</span>
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </BentoCard>
+      ))}
+    </div>
+
+    <!-- Educación en bento -->
+    <div class="mt-6">
+      <BentoCard 
+        accent="amber"
+      >
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <div class="text-3xl mb-2">🎓</div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+              Ingeniería Civil en Informática
+            </h3>
+            <p class="text-amber-600 dark:text-amber-400 font-semibold">Universidad del Bío-Bío</p>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Concepción, Chile • 2022</p>
+            <p class="text-sm text-gray-700 dark:text-gray-300 font-semibold text-gray-900 dark:text-white mb-1">Cursos relevantes: ML, POO, Gestión de proyectos, Bases de datos</p>
+          </div>
+        </div>
+      </BentoCard>
+    </div>
+  </div>
+</section>

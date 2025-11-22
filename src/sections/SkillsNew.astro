@@ -12,7 +12,7 @@ const skillCategories = [
   {
     title: "Backend",
     icon: "⚙️",
-    skills: ["Laravel", "Node.js", "Python", "PHPUnit"],
+    skills: ["Laravel", "Node.js", "FastAPI", "PHPUnit"],
     accent: "red",
     level: "Avanzado"
   },
@@ -32,12 +32,12 @@ const skillCategories = [
   }
 ];
 
-const achievements = [
-  { icon: "📉", value: "90%", label: "Reducción horas operativas" },
-  { icon: "🐛", value: "80%", label: "Menos fallos en producción" },
-  { icon: "📦", value: "70K+", label: "Despachos gestionados" },
-  { icon: "⚡", value: "Días → Min", label: "Tiempo de respuesta" }
-];
+// const achievements = [
+//   { icon: "📉", value: "90%", label: "Reducción horas operativas" },
+//   { icon: "🐛", value: "80%", label: "Menos fallos en producción" },
+//   { icon: "📦", value: "70K+", label: "Despachos gestionados" },
+//   { icon: "⚡", value: "Días → Min", label: "Tiempo de respuesta" }
+// ];
 ---
 
 <section id="skills" class="py-20 px-4">
@@ -54,7 +54,7 @@ const achievements = [
     <!-- Skills Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
       {skillCategories.map((category) => (
-        <BentoCard 
+        <BentoCard
           accent={category.accent}
           class="hover:shadow-2xl text-center"
         >
@@ -80,9 +80,9 @@ const achievements = [
     </div>
 
     <!-- Achievements Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {achievements.map((achievement) => (
-        <BentoCard 
+        <BentoCard
           accent="amber"
           class="text-center"
         >
@@ -95,11 +95,11 @@ const achievements = [
           </div>
         </BentoCard>
       ))}
-    </div>
+    </div> -->
 
     <!-- Mentoría -->
     <div class="mt-6">
-      <BentoCard 
+      <BentoCard
         accent="indigo"
       >
         <div class="flex items-start gap-4">
@@ -108,7 +108,7 @@ const achievements = [
             <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Mentoría Técnica</h3>
             <p class="text-indigo-600 dark:text-indigo-400 font-semibold mb-2">Holdco Networks • Abril 2024 – Actualidad</p>
             <p class="text-gray-700 dark:text-gray-300 text-sm">
-              Capacito y guío a nuevos desarrolladores durante su onboarding técnico. 
+              Capacito y guío a nuevos desarrolladores durante su onboarding técnico.
               Fomento buenas prácticas en React, Laravel, arquitectura de microservicios y desarrollo escalable.
             </p>
           </div>

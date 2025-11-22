@@ -1,5 +1,6 @@
 ---
 import BentoCard from "../components/BentoCard.astro";
+import ubbLogo from "../assets/ubb.webp";
 
 const experiences = [
   {
@@ -43,7 +44,7 @@ const experiences = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {experiences.map((exp) => (
-        <BentoCard 
+        <BentoCard
           accent={exp.accent}
           class="hover:shadow-2xl"
         >
@@ -77,20 +78,26 @@ const experiences = [
 
     <!-- Educación en bento -->
     <div class="mt-6">
-      <BentoCard 
+      <BentoCard
         accent="amber"
+        class="flex flex-col items-center hover:shadow-2xl"
       >
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div>
-            <div class="text-3xl mb-2">🎓</div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">
-              Ingeniería Civil en Informática
-            </h3>
-            <p class="text-amber-600 dark:text-amber-400 font-semibold">Universidad del Bío-Bío</p>
-            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Concepción, Chile • 2022</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300 font-semibold text-gray-900 dark:text-white mb-1">Cursos relevantes: ML, POO, Gestión de proyectos, Bases de datos</p>
-          </div>
-        </div>
+              <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <img
+                    src={ubbLogo.src}
+                    alt="Universidad del Bío-Bío Logo"
+                    class="mx-6 w-30 h-30 object-contain"
+                />
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                    Ingeniería Civil en Informática
+                  </h3>
+                  <p class="text-amber-600 dark:text-amber-400 font-semibold">Universidad del Bío-Bío</p>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Concepción, Chile • 2022</p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 font-semibold text-gray-900 dark:text-white mb-1">Cursos relevantes: ML, POO, Gestión de proyectos, Bases de datos</p>
+                </div>
+
+              </div>
       </BentoCard>
     </div>
   </div>

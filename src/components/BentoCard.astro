@@ -7,10 +7,10 @@ interface Props {
   icon?: string;
 }
 
-const { 
-  title, 
-  subtitle, 
-  class: className = "", 
+const {
+  title,
+  subtitle,
+  class: className = "",
   accent = "indigo",
   icon
 } = Astro.props;
@@ -31,26 +31,26 @@ const accentColors = {
 
 <div class={`group relative overflow-hidden bg-white dark:bg-slate-800 border-2 ${accentColors[accent as keyof typeof accentColors]} paper-shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${className}`}>
   <!-- Corner fold effect -->
-  
-  
+
+
   <div class="relative p-6 pl-12 h-full flex flex-col">
     {icon && (
       <div class="text-4xl mb-3 transform group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
     )}
-    
+
     {title && (
       <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 relative">
         {title}
         <div class={`absolute -left-10 top-1/2 -translate-y-1/2 w-1 h-6 bg-${accent}-500 dark:bg-${accent}-400`}></div>
       </h3>
     )}
-    
+
     {subtitle && (
       <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">{subtitle}</p>
     )}
-    
+
     <div class="flex-1 text-gray-700 dark:text-gray-200">
       <slot />
     </div>
